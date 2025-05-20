@@ -1,6 +1,6 @@
 # Site Web The Kingdom of Sylvania - WoW 3.3.5a
 
-![Page d'accueil The Kingdom of Sylvania](screenshots/Capture%20d'écran%202025-05-20%20203832.png)
+![Page d'accueil The Kingdom of Sylvania](screenshots/homepage.png)
 
 ## À propos
 Site web officiel pour le serveur privé WoW The Kingdom of Sylvania, basé sur AzerothCore 3.3.5a (Wrath of the Lich King).
