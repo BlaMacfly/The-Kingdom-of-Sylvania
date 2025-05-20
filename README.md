@@ -12,6 +12,12 @@ Site web officiel pour le serveur privé WoW The Kingdom of Sylvania, basé sur 
 - Information sur les modules personnalisés (ARAC, Transmog, SoloCraft, etc.)
 - Téléchargement de patches et fichiers clients
 
+### Carte des joueurs
+![Carte des joueurs](screenshots/Map.png)
+
+### Contrôle Serveur
+![Bouton de contrôle ON/OFF](screenshots/on%20off%20button.png)
+
 ## Modules Serveur
 - **ARAC** (All Races All Classes) - Permet à toutes les races de jouer toutes les classes
 - **Transmog** - Modification de l'apparence des équipements
