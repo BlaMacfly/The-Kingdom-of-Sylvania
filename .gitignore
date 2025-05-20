@@ -25,3 +25,4 @@ direct_start.sh
 # Dossiers spécifiques
 archive/
 archive_old/
+.htpasswd
