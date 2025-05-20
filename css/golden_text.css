@@ -1,0 +1,94 @@
+/* Modification des couleurs de texte pour utiliser la couleur dorée #EABA28 */
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+    color: #EABA28 !important;
+}
+
+/* Paragraphes de texte */
+p, .card-body p, .lead, .card-text {
+    color: #EABA28 !important;
+}
+
+/* Texte dans les listes */
+li, ul li, ol li {
+    color: #EABA28 !important;
+}
+
+/* Texte dans les sections spécifiques */
+.card-body, .feature-content, .section-content {
+    color: #EABA28 !important;
+}
+
+/* Titres de cartes */
+.card-header h2, .card-title {
+    color: #EABA28 !important;
+}
+
+/* Liens de navigation */
+.nav-item:hover, .nav-item.active {
+    color: #EABA28 !important;
+}
+
+/* Liens dans le contenu */
+a:not(.btn):not(.nav-item):not(.logo) {
+    color: #EABA28 !important;
+}
+a:not(.btn):not(.nav-item):not(.logo):hover {
+    color: #f0c14b !important; /* Version plus claire au survol */
+    text-decoration: underline;
+}
+
+/* Texte d'accent et éléments importants */
+.accent-text, .highlight, .feature-title {
+    color: #EABA28 !important;
+}
+
+/* Boutons avec fond doré */
+.btn-primary {
+    background-color: #EABA28 !important;
+    border-color: #EABA28 !important;
+    color: #0f1218 !important; /* Texte foncé sur fond doré */
+}
+.btn-primary:hover {
+    background-color: #f0c14b !important;
+    border-color: #f0c14b !important;
+}
+
+/* Éléments d'interface spécifiques */
+.status-text.online {
+    color: #28a745 !important; /* Garder le vert pour "En ligne" */
+}
+.status-text.offline {
+    color: #dc3545 !important; /* Garder le rouge pour "Hors ligne" */
+}
+
+/* Texte de bienvenue et titres de section */
+.welcome-title, .section-title {
+    color: #EABA28 !important;
+}
+
+/* Texte des onglets actifs */
+.nav-link.active {
+    color: #EABA28 !important;
+}
+
+/* Texte des labels de formulaire */
+.form-label {
+    color: #EABA28 !important;
+}
+
+/* Texte des statistiques */
+.stat-label, .stat-value {
+    color: #EABA28 !important;
+}
+
+/* Texte dans les instructions */
+.instructions p, .instructions li {
+    color: #EABA28 !important;
+}
+
+/* Tout autre texte qui pourrait être oublié */
+span:not(.status-text), div:not(.status-indicator) {
+    color: #EABA28 !important;
+}

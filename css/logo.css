@@ -1,0 +1,18 @@
+/* Styles pour le logo Sylvania */
+.logo img {
+    max-height: 40px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 30px;
+    }
+}

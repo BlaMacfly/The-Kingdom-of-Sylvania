@@ -1,0 +1,27 @@
+# Fichiers de logs
+*.log
+logs/
+direct_start.log
+
+# Fichiers de configuration contenant des informations sensibles
+config/auth.php
+# Dossier de cache
+cache/
+
+# Fichiers temporaires
+tmp/
+temp/
+*.tmp
+
+# Fichiers sensibles de configuration
+auth_error_simple.log
+azerothcore_sudo
+www-data-sudo
+
+# Autres fichiers sensibles
+direct_start.sh
+*.sh
+
+# Dossiers spécifiques
+archive/
+archive_old/

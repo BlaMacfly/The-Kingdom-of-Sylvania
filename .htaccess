@@ -1,0 +1,65 @@
+# Désactiver TOUTE authentification HTTP basique
+AuthType None
+Require all granted
+Satisfy Any
+
+# Si une authentification est configurée ailleurs, utiliser un fichier .htpasswd vide
+AuthUserFile /home/mccloud/wow_3.3.5/sylvania-web/.htpasswd
+
+# Désactiver explicitement l'authentification HTTP basique
+<IfModule mod_auth_basic.c>
+    AuthType None
+    Require all granted
+    Satisfy Any
+</IfModule>
+
+# Supprimer les en-têtes d'authentification
+<IfModule mod_headers.c>
+    Header unset WWW-Authenticate
+</IfModule>
+
+# Redédirection pour le contrôle du serveur
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Rediriger server_auth.php vers server_control_onoff.php
+    RewriteCond %{REQUEST_URI} ^/server_auth\.php [NC]
+    RewriteRule ^(.*)$ /server_control_onoff.php [L]
+    
+    # Conserver les autres règles existantes
+    # Forcer HTTPS sauf pour le port 8372
+    RewriteCond %{HTTPS} off
+    RewriteCond %{SERVER_PORT} !^8372$
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Empêcher l'accès aux fichiers sensibles
+<FilesMatch "^(config\.php|.*\.log)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Activer la compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript
+</IfModule>
+
+# Définir l'expiration du cache
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+</IfModule>
+
+# Définir les types MIME
+<IfModule mod_mime.c>
+    AddType text/html .html .htm
+    AddType text/css .css
+    AddType application/javascript .js
+    AddType application/json .json
+</IfModule>

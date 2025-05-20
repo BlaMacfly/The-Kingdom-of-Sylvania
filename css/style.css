@@ -1,0 +1,67 @@
+/* Amélioration de la visibilité des textes */
+.card-body {
+    color: #fff !important;
+}
+
+.card-header h3 {
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+.lead {
+    color: #fff !important;
+    font-weight: 400 !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+ol li {
+    margin-bottom: 10px !important;
+    color: #fff !important;
+}
+
+code {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    color: #00ccff !important;
+    padding: 3px 6px !important;
+    border-radius: 4px !important;
+}
+
+/* Amélioration du contraste pour les formulaires */
+.form-label {
+    color: #fff !important;
+    font-weight: 500 !important;
+}
+
+.form-text {
+    color: #aad0ff !important;
+}
+
+/* Amélioration de l'arrière-plan */
+.card {
+    background-color: rgba(15, 18, 24, 0.9) !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.card-header {
+    background-color: rgba(44, 51, 71, 0.9) !important;
+}
+
+/* Amélioration des boutons */
+.btn-primary {
+    background-color: #0078ff !important;
+    border-color: #0078ff !important;
+    font-weight: 600 !important;
+    box-shadow: 0 0 10px rgba(0, 120, 255, 0.5) !important;
+}
+
+.btn-primary:hover {
+    background-color: #0066cc !important;
+    border-color: #0066cc !important;
+}
+
+/* Amélioration du titre principal */
+h1 {
+    color: #fff !important;
+    text-shadow: 0 0 10px rgba(0, 120, 255, 0.7) !important;
+    font-weight: 700 !important;
+}

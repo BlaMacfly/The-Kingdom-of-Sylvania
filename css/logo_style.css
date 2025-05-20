@@ -1,0 +1,29 @@
+/* Styles pour le logo Sylvania */
+.logo img {
+    max-height: 150px; /* Hauteur maximale du logo augmentée */
+    width: auto;
+    vertical-align: middle;
+    padding: 5px; /* Espace autour du logo */
+    margin-top: -35px; /* Décalage vers le haut pour dépasser la barre */
+    margin-bottom: -35px; /* Décalage vers le bas pour équilibrer */
+    position: relative; /* Nécessaire pour le z-index */
+    z-index: 10; /* S'assure que le logo est au-dessus des autres éléments */
+}
+
+/* Style pour le conteneur du logo */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Espace entre le logo et la navigation */
+    position: relative; /* Pour le positionnement du logo */
+    overflow: visible; /* Permet au logo de dépasser */
+}
+
+/* Ajustement pour les petits écrans */
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 100px; /* Taille réduite mais toujours visible sur mobile */
+        margin-top: -25px; /* Ajustement du décalage pour mobile */
+        margin-bottom: -25px;
+    }
+}

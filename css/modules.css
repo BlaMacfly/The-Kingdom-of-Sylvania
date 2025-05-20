@@ -1,0 +1,119 @@
+.module-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.module-card {
+    background-color: rgba(26, 31, 42, 0.8);
+    border: 1px solid #2c3347;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.module-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.module-icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(234, 186, 40, 0.3);
+}
+
+.module-title {
+    color: #EABA28;
+    margin: 0;
+}
+
+.module-description {
+    margin-bottom: 20px;
+}
+
+.module-commands {
+    background-color: rgba(15, 18, 24, 0.9);
+    border-radius: 5px;
+    padding: 15px;
+    font-family: monospace;
+    margin-bottom: 15px;
+}
+
+.command-title {
+    color: #EABA28;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.module-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.category-btn {
+    background-color: rgba(26, 31, 42, 0.8);
+    color: #fff;
+    border: 1px solid #2c3347;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-btn:hover, .category-btn.active {
+    background-color: #EABA28;
+    color: #1a1f2a;
+    border-color: #EABA28;
+}
+
+.module-section {
+    margin-top: 30px;
+}
+
+.section-title {
+    color: #EABA28;
+    border-bottom: 1px solid #2c3347;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(26, 31, 42, 0.8);
+    color: #EABA28;
+    border: 1px solid #EABA28;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background-color: #EABA28;
+    color: #1a1f2a;
+}

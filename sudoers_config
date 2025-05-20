@@ -1,0 +1,1 @@
+www-data ALL=(ALL) NOPASSWD: /home/mccloud/wow_3.3.5/sylvania-web/server_killer.sh, /home/mccloud/wow_3.3.5/sylvania-web/server_starter.sh

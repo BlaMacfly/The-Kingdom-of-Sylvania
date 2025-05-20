@@ -1,0 +1,242 @@
+/* Styles pour les boutons de contrôle du serveur */
+.server-control-panel {
+    background-color: rgba(15, 18, 24, 0.9);
+    border: 1px solid #2c3347;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.server-control-panel h3 {
+    color: #EABA28;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.server-control-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.control-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.control-button-label {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+
+.power-button, .restart-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    font-size: 24px;
+    color: #fff;
+}
+
+.power-button {
+    background-color: #dc3545; /* Rouge par défaut (services arrêtés) */
+}
+
+.power-button.active {
+    background-color: #28a745; /* Vert quand les services sont actifs */
+}
+
+.restart-button {
+    background-color: #007bff;
+}
+
+.power-button:hover, .restart-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.service-status {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #dc3545; /* Rouge par défaut */
+}
+
+.status-dot.active {
+    background-color: #28a745; /* Vert quand le service est actif */
+}
+
+.service-name {
+    color: #fff;
+    font-size: 12px;
+}
+
+/* Modal d'authentification - AMÉLIORÉ */
+.auth-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    /* Centrage parfait */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-modal-content {
+    background-color: #0f1218;
+    border: 1px solid #2c3347;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Position absolue pour un centrage parfait */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.auth-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #2c3347;
+    padding-bottom: 10px;
+}
+
+.auth-modal-title {
+    color: #EABA28;
+    margin: 0;
+    font-size: 18px;
+}
+
+.auth-modal-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.auth-form-group {
+    margin-bottom: 15px;
+}
+
+.auth-form-label {
+    display: block;
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.auth-form-input {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1f2a;
+    border: 1px solid #2c3347;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.auth-form-input:focus {
+    outline: none;
+    border-color: #EABA28;
+}
+
+.auth-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.auth-submit-btn {
+    background-color: #EABA28;
+    color: #0f1218;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-submit-btn:hover {
+    background-color: #f0c14b;
+}
+
+.auth-error-message {
+    display: none;
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Overlay de chargement */
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1100;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #EABA28;
+    animation: spin 1s ease-in-out infinite;
+    margin-bottom: 20px;
+}
+
+.loading-message {
+    color: #fff;
+    font-size: 16px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
